@@ -121,7 +121,11 @@ export class PIQuestionApi {
   }
 
   public getTwoQuestionList(): Observable<ITwoQuestionList> {
-    const twoList = this.questionVMs.reduce((acc, cur) => {
+    const twoList = this.questionVMs.sort((a, b) => {
+      const timeA = new Date(a.updatedAt);
+      const timeB = new Date(b.updatedAt);
+      return timeA > timeB ? -1 : 1;
+    }).reduce((acc, cur) => {
       if (cur.isResolve) {
         acc.answered.push(cur);
       } else {
@@ -206,7 +210,11 @@ export class PIQuestionApi {
 
   public get questions(): IQuestion[] {
     const questions = JSON.parse(localStorage.getItem('questions') || '[]') as IQuestion[];
-    return questions.sort((a, b) => new Date(a.updatedAt).getTime() - new Date(b.updatedAt).getTime());
+    return questions.sort((a, b) => {
+      const timeA = new Date(a.createdAt);
+      const timeB = new Date(b.createdAt);
+      return timeA > timeB ? -1 : 1;
+    });
   }
 
   public set questions(questions: IQuestion[]) {

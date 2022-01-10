@@ -1,0 +1,31 @@
+.wrapper--main--list {
+  @apply w-full;
+  &--navigation {
+    @apply flex justify-between items-center;
+    h3 {
+      @apply text-4xl text-white;
+    }
+
+    &--actions {
+      @apply flex gap-2;
+    }
+  }
+  &--questions {
+    @apply w-full flex;
+    &--item {
+      @apply w-1/2;
+      &.left {
+        @apply pr-3;
+      }
+      &.right {
+        @apply pl-3;
+      }
+      &--each {
+        @apply w-full px-4 py-2 border border-solid border-blue-500 rounded mb-4;
+        h3 {
+          @apply text-white text-2xl mb-2;
+        }
+      }
+    }
+  }
+}

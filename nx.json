@@ -1,0 +1,125 @@
+{
+  "npmScope": "pageloot-interview",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "main": {
+      "tags": []
+    },
+    "main-create-shared-data-access-service": {
+      "tags": []
+    },
+    "main-create-shared-data-access-store": {
+      "tags": []
+    },
+    "main-create-shared-utils-constants": {
+      "tags": []
+    },
+    "main-create-shell-main": {
+      "tags": []
+    },
+    "main-e2e": {
+      "tags": [],
+      "implicitDependencies": ["main"]
+    },
+    "main-edit-shared-data-access-service": {
+      "tags": []
+    },
+    "main-edit-shared-data-access-store": {
+      "tags": []
+    },
+    "main-edit-shared-utils-constants": {
+      "tags": []
+    },
+    "main-edit-shell-main": {
+      "tags": []
+    },
+    "main-list-shared-data-access-service": {
+      "tags": []
+    },
+    "main-list-shared-data-access-store": {
+      "tags": []
+    },
+    "main-list-shared-utils-constants": {
+      "tags": []
+    },
+    "main-list-shell-main": {
+      "tags": []
+    },
+    "main-management-shared-data-access-service": {
+      "tags": []
+    },
+    "main-management-shared-data-access-store": {
+      "tags": []
+    },
+    "main-management-shared-utils-constants": {
+      "tags": []
+    },
+    "main-management-shell-main": {
+      "tags": []
+    },
+    "main-shared-data-access-service": {
+      "tags": []
+    },
+    "main-shared-data-access-store": {
+      "tags": []
+    },
+    "main-shared-utils-constants": {
+      "tags": []
+    },
+    "main-shared-utils-interceptors": {
+      "tags": []
+    },
+    "main-shell-main": {
+      "tags": []
+    },
+    "main-shell-ui-layout": {
+      "tags": []
+    },
+    "shared-data-access-api": {
+      "tags": []
+    },
+    "shared-utils-assets": {
+      "tags": []
+    },
+    "shared-utils-configs": {
+      "tags": []
+    },
+    "shared-utils-environments": {
+      "tags": []
+    },
+    "shared-utils-generators": {
+      "tags": []
+    },
+    "shared-utils-observable": {
+      "tags": []
+    },
+    "shared-utils-validators": {
+      "tags": []
+    }
+  }
+}

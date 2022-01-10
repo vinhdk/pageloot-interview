@@ -1,0 +1,49 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="wrapper--main--list">
+    <div class="wrapper--main--list--navigation">
+      <h3>{{'MAIN.LIST.SHELL.MAIN.TITLE' | translate}}</h3>
+      <div class="wrapper--main--list--navigation--actions">
+        <button tuiIconButton size="m" shape="rounded" appearance="outline" icon="tuiIconPlus" (click)="goToCreationPage()"></button>
+        <button tuiIconButton size="m" shape="rounded" appearance="outline" icon="tuiIconCompanyLarge" (click)="goToManagementPage()"></button>
+      </div>
+    </div>
+    <div class="wrapper--main--list--questions">
+      <div class="wrapper--main--list--questions--item left">
+        <ng-container *ngFor="let question of state.twoList.unanswered">
+          <div class="wrapper--main--list--questions--item--each">
+            <h3>{{question.text}}</h3>
+            <ng-container [ngSwitch]="question.type">
+              <ng-container *ngSwitchCase="QuestionType.Text">
+                <pi-main-list-text [question]="question"></pi-main-list-text>
+              </ng-container>
+              <ng-container *ngSwitchCase="QuestionType.MultipleChoice">
+                <pi-main-list-multiple-choice [question]="question"></pi-main-list-multiple-choice>
+              </ng-container>
+              <ng-container *ngSwitchCase="QuestionType.SingleChoice">
+                <pi-main-list-single-choice [question]="question"></pi-main-list-single-choice>
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+      <div class="wrapper--main--list--questions--item right">
+        <ng-container *ngFor="let question of state.twoList.answered">
+          <div class="wrapper--main--list--questions--item--each">
+            <h3>{{question.text}}</h3>
+            <ng-container [ngSwitch]="question.type">
+              <ng-container *ngSwitchCase="QuestionType.Text">
+                <pi-main-list-text [answered]="true" [question]="question"></pi-main-list-text>
+              </ng-container>
+              <ng-container *ngSwitchCase="QuestionType.MultipleChoice">
+                <pi-main-list-multiple-choice [answered]="true" [question]="question"></pi-main-list-multiple-choice>
+              </ng-container>
+              <ng-container *ngSwitchCase="QuestionType.SingleChoice">
+                <pi-main-list-single-choice [answered]="true" [question]="question"></pi-main-list-single-choice>
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</ng-container>

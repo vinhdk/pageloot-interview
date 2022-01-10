@@ -1,0 +1,215 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@main": ["libs/main/index.ts"],
+      "@main-create": ["libs/main/create/index.ts"],
+      "@main-create-shared": ["libs/main/create/shared/index.ts"],
+      "@main-create-shared-data-access": [
+        "libs/main/create/shared/data-access/index.ts"
+      ],
+      "@main-create-shared-data-access-service": [
+        "libs/main/create/shared/data-access/service/src/index.ts"
+      ],
+      "@main-create-shared-data-access-store": [
+        "libs/main/create/shared/data-access/store/src/index.ts"
+      ],
+      "@main-create-shared-ui": ["libs/main/create/shared/ui/index.ts"],
+      "@main-create-shared-utils": ["libs/main/create/shared/utils/index.ts"],
+      "@main-create-shared-utils-constants": [
+        "libs/main/create/shared/utils/constants/src/index.ts"
+      ],
+      "@main-create-shell": ["libs/main/create/shell/index.ts"],
+      "@main-create-shell-main": [
+        "libs/main/create/shell/main/create/src/index.ts"
+      ],
+      "@main-create-shell-ui": ["libs/main/create/shell/ui/index.ts"],
+      "@main-create-shell-ui-layout": [
+        "libs/main/create/shell/ui/layout/src/index.ts"
+      ],
+      "@main-edit": ["libs/main/edit/index.ts"],
+      "@main-edit-shared": ["libs/main/edit/shared/index.ts"],
+      "@main-edit-shared-data-access": [
+        "libs/main/edit/shared/data-access/index.ts"
+      ],
+      "@main-edit-shared-data-access-service": [
+        "libs/main/edit/shared/data-access/service/src/index.ts"
+      ],
+      "@main-edit-shared-data-access-store": [
+        "libs/main/edit/shared/data-access/store/src/index.ts"
+      ],
+      "@main-edit-shared-ui": ["libs/main/edit/shared/ui/index.ts"],
+      "@main-edit-shared-utils": ["libs/main/edit/shared/utils/index.ts"],
+      "@main-edit-shared-utils-constants": [
+        "libs/main/edit/shared/utils/constants/src/index.ts"
+      ],
+      "@main-edit-shell": ["libs/main/edit/shell/index.ts"],
+      "@main-edit-shell-main": ["libs/main/edit/shell/main/edit/src/index.ts"],
+      "@main-edit-shell-ui": ["libs/main/edit/shell/ui/index.ts"],
+      "@main-edit-shell-ui-layout": [
+        "libs/main/edit/shell/ui/layout/src/index.ts"
+      ],
+      "@main-list": ["libs/main/list/index.ts"],
+      "@main-list-shared": ["libs/main/list/shared/index.ts"],
+      "@main-list-shared-data-access": [
+        "libs/main/list/shared/data-access/index.ts"
+      ],
+      "@main-list-shared-data-access-service": [
+        "libs/main/list/shared/data-access/service/src/index.ts"
+      ],
+      "@main-list-shared-data-access-store": [
+        "libs/main/list/shared/data-access/store/src/index.ts"
+      ],
+      "@main-list-shared-ui": ["libs/main/list/shared/ui/index.ts"],
+      "@main-list-shared-utils": ["libs/main/list/shared/utils/index.ts"],
+      "@main-list-shared-utils-constants": [
+        "libs/main/list/shared/utils/constants/src/index.ts"
+      ],
+      "@main-list-shell": ["libs/main/list/shell/index.ts"],
+      "@main-list-shell-main": ["libs/main/list/shell/main/list/src/index.ts"],
+      "@main-list-shell-ui": ["libs/main/list/shell/ui/index.ts"],
+      "@main-list-shell-ui-layout": [
+        "libs/main/list/shell/ui/layout/src/index.ts"
+      ],
+      "@main-management": ["libs/main/management/index.ts"],
+      "@main-management-shared": ["libs/main/management/shared/index.ts"],
+      "@main-management-shared-data-access": [
+        "libs/main/management/shared/data-access/index.ts"
+      ],
+      "@main-management-shared-data-access-service": [
+        "libs/main/management/shared/data-access/service/src/index.ts"
+      ],
+      "@main-management-shared-data-access-store": [
+        "libs/main/management/shared/data-access/store/src/index.ts"
+      ],
+      "@main-management-shared-ui": ["libs/main/management/shared/ui/index.ts"],
+      "@main-management-shared-utils": [
+        "libs/main/management/shared/utils/index.ts"
+      ],
+      "@main-management-shared-utils-constants": [
+        "libs/main/management/shared/utils/constants/src/index.ts"
+      ],
+      "@main-management-shell": ["libs/main/management/shell/index.ts"],
+      "@main-management-shell-main": [
+        "libs/main/management/shell/main/management/src/index.ts"
+      ],
+      "@main-management-shell-ui": ["libs/main/management/shell/ui/index.ts"],
+      "@main-management-shell-ui-layout": [
+        "libs/main/management/shell/ui/layout/src/index.ts"
+      ],
+      "@main-shared": ["libs/main/shared/index.ts"],
+      "@main-shared-data-access": ["libs/main/shared/data-access/index.ts"],
+      "@main-shared-data-access-service": [
+        "libs/main/shared/data-access/service/src/index.ts"
+      ],
+      "@main-shared-data-access-store": [
+        "libs/main/shared/data-access/store/src/index.ts"
+      ],
+      "@main-shared-ui": ["libs/main/shared/ui/index.ts"],
+      "@main-shared-utils": ["libs/main/shared/utils/index.ts"],
+      "@main-shared-utils-constants": [
+        "libs/main/shared/utils/constants/src/index.ts"
+      ],
+      "@main-shared-utils-interceptors": [
+        "libs/main/shared/utils/interceptors/src/index.ts"
+      ],
+      "@main-shell": ["libs/main/shell/index.ts"],
+      "@main-shell-main": ["libs/main/shell/main/src/index.ts"],
+      "@main-shell-ui": ["libs/main/shell/ui/index.ts"],
+      "@main-shell-ui-layout": ["libs/main/shell/ui/layout/src/index.ts"],
+      "@pageloot-interview/main/create/shared/data-access/service": [
+        "libs/main/create/shared/data-access/service/src/index.ts"
+      ],
+      "@pageloot-interview/main/create/shared/data-access/store": [
+        "libs/main/create/shared/data-access/store/src/index.ts"
+      ],
+      "@pageloot-interview/main/create/shared/utils/constants": [
+        "libs/main/create/shared/utils/constants/src/index.ts"
+      ],
+      "@pageloot-interview/main/create/shell/main": [
+        "libs/main/create/shell/main/src/index.ts"
+      ],
+      "@pageloot-interview/main/edit/shared/data-access/service": [
+        "libs/main/edit/shared/data-access/service/src/index.ts"
+      ],
+      "@pageloot-interview/main/edit/shared/data-access/store": [
+        "libs/main/edit/shared/data-access/store/src/index.ts"
+      ],
+      "@pageloot-interview/main/edit/shared/utils/constants": [
+        "libs/main/edit/shared/utils/constants/src/index.ts"
+      ],
+      "@pageloot-interview/main/edit/shell/main": [
+        "libs/main/edit/shell/main/src/index.ts"
+      ],
+      "@pageloot-interview/main/list/shared/data-access/service": [
+        "libs/main/list/shared/data-access/service/src/index.ts"
+      ],
+      "@pageloot-interview/main/list/shared/data-access/store": [
+        "libs/main/list/shared/data-access/store/src/index.ts"
+      ],
+      "@pageloot-interview/main/list/shared/utils/constants": [
+        "libs/main/list/shared/utils/constants/src/index.ts"
+      ],
+      "@pageloot-interview/main/list/shell/main": [
+        "libs/main/list/shell/main/src/index.ts"
+      ],
+      "@pageloot-interview/main/management/shared/data-access/service": [
+        "libs/main/management/shared/data-access/service/src/index.ts"
+      ],
+      "@pageloot-interview/main/management/shared/data-access/store": [
+        "libs/main/management/shared/data-access/store/src/index.ts"
+      ],
+      "@pageloot-interview/main/management/shared/utils/constants": [
+        "libs/main/management/shared/utils/constants/src/index.ts"
+      ],
+      "@pageloot-interview/main/management/shell/main": [
+        "libs/main/management/shell/main/src/index.ts"
+      ],
+      "@pageloot-interview/main/shared/data-access/service": [
+        "libs/main/shared/data-access/service/src/index.ts"
+      ],
+      "@pageloot-interview/main/shared/data-access/store": [
+        "libs/main/shared/data-access/store/src/index.ts"
+      ],
+      "@pageloot-interview/main/shared/utils/constants": [
+        "libs/main/shared/utils/constants/src/index.ts"
+      ],
+      "@pageloot-interview/main/shared/utils/interceptors": [
+        "libs/main/shared/utils/interceptors/src/index.ts"
+      ],
+      "@pageloot-interview/main/shell/main": [
+        "libs/main/shell/main/src/index.ts"
+      ],
+      "@pageloot-interview/main/shell/ui/layout": [
+        "libs/main/shell/ui/layout/src/index.ts"
+      ],
+      "@shared": ["libs/shared/index.ts"],
+      "@shared-data-access": ["libs/shared/data-access/index.ts"],
+      "@shared-data-access-api": ["libs/shared/data-access/api/src/index.ts"],
+      "@shared-ui": ["libs/shared/ui/index.ts"],
+      "@shared-utils": ["libs/shared/utils/index.ts"],
+      "@shared-utils-assets": ["libs/shared/utils/assets/src/index.ts"],
+      "@shared-utils-configs": ["libs/shared/utils/configs/src/index.ts"],
+      "@shared-utils-environments": [
+        "libs/shared/utils/environments/src/index.ts"
+      ],
+      "@shared-utils-generators": ["libs/shared/utils/generators/src/index.ts"],
+      "@shared-utils-observable": ["libs/shared/utils/observable/src/index.ts"],
+      "@shared-utils-validators": ["libs/shared/utils/validators/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

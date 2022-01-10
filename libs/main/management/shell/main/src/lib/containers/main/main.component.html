@@ -1,0 +1,54 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="wrapper--main--management">
+    <div class="wrapper--main--management--navigation">
+      <h3>{{'MAIN.MANAGEMENT.SHELL.MAIN.TITLE' | translate}}</h3>
+      <div class="wrapper--main--management--navigation--actions">
+        <button tuiIconButton size="m" shape="rounded" appearance="outline" icon="tuiIconPlus" (click)="goToCreationPage()"></button>
+        <button tuiIconButton size="m" shape="rounded" appearance="outline" icon="tuiIconStructureLarge" (click)="goToListPage()"></button>
+      </div>
+    </div>
+    <table class="wrapper--main--management--table">
+      <thead class="wrapper--main--management--table--thead">
+        <tr class="wrapper--main--management--table--thead--tr">
+          <th class="wrapper--main--management--table--thead--tr--th">
+            {{'MAIN.MANAGEMENT.SHELL.MAIN.TABLE.HEADER.TEXT' | translate}}
+          </th>
+          <th class="wrapper--main--management--table--thead--tr--th">
+            {{'MAIN.MANAGEMENT.SHELL.MAIN.TABLE.HEADER.TYPE' | translate}}
+          </th>
+          <th class="wrapper--main--management--table--thead--tr--th">
+            {{'MAIN.MANAGEMENT.SHELL.MAIN.TABLE.HEADER.DATE' | translate}}
+          </th>
+          <th class="wrapper--main--management--table--thead--tr--th action">
+            {{'MAIN.MANAGEMENT.SHELL.MAIN.TABLE.HEADER.ACTIONS' | translate}}
+          </th>
+        </tr>
+      </thead>
+      <tbody class="wrapper--main--management--table--tbody">
+        <ng-container *ngFor="let question of state.questions">
+          <tr class="wrapper--main--management--table--tbody--tr">
+            <td class="wrapper--main--management--table--tbody--tr--td">
+              {{question.text}}
+            </td>
+            <td class="wrapper--main--management--table--tbody--tr--td">
+              {{question.type | translate}}
+            </td>
+            <td class="wrapper--main--management--table--tbody--tr--td">
+              {{question.createdAt | date: 'MM/dd/YYYY'}}
+            </td>
+            <td class="wrapper--main--management--table--tbody--tr--td">
+              <div class="wrapper--main--management--table--tbody--tr--td--actions">
+                <button tuiButton shape="rounded" size="m" icon="tuiIconDraft" appearance="primary" (click)="goToEditPage(question.id)">
+                  {{'MAIN.MANAGEMENT.SHELL.MAIN.TABLE.ACTIONS.EDIT' | translate}}
+                </button>
+                <button tuiButton shape="rounded" size="m" icon="tuiIconTrash" appearance="accent" (click)="remove(question.id)">
+                  {{'MAIN.MANAGEMENT.SHELL.MAIN.TABLE.ACTIONS.DELETE' | translate}}
+                </button>
+              </div>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</ng-container>

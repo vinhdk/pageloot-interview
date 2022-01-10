@@ -1,0 +1,97 @@
+{
+  "MAIN": {
+    "CREATE": {
+      "SHELL": {
+        "MAIN": {
+          "TITLE": "Creation",
+          "INPUTS": {
+            "TEXT": "Type a text",
+            "OF": " of answer ",
+            "TYPE": "Select Type"
+          },
+          "BUTTONS": {
+            "SUBMIT": "Create",
+            "ADD_ANSWER": "Add new answer"
+          }
+        }
+      },
+      "SHARED": {
+
+      }
+    },
+    "EDIT": {
+      "SHELL": {
+        "MAIN": {
+          "TITLE": "Edit",
+          "INPUTS": {
+            "TEXT": "Type a text",
+            "OF": " of answer ",
+            "TYPE": "Select Type"
+          },
+          "BUTTONS": {
+            "SUBMIT": "Save",
+            "ADD_ANSWER": "Add new answer"
+          }
+        }
+      },
+      "SHARED": {
+
+      }
+    },
+    "LIST": {
+      "SHELL": {
+        "MAIN": {
+          "TITLE": "Question List",
+          "INPUTS": {
+            "ANSWER": "Type your answer"
+          },
+          "BUTTONS": {
+            "SUBMIT": "Save",
+            "BACK": "Roll back"
+          }
+        }
+      },
+      "SHARED": {
+
+      }
+    },
+    "MANAGEMENT": {
+      "SHELL": {
+        "MAIN": {
+          "TITLE": "Question Management",
+          "TABLE": {
+            "HEADER": {
+              "TEXT": "Text",
+              "TYPE": "Type",
+              "DATE": "Date",
+              "ACTIONS": "Actions"
+            },
+            "ACTIONS": {
+              "EDIT": "Edit",
+              "DELETE": "Delete",
+              "GO_TO_CREATE": "Add new Question"
+            }
+          }
+        }
+      },
+      "SHARED": {
+
+      }
+    },
+    "SHELL": {
+
+    },
+    "SHARED": {
+
+    }
+  },
+  "SHARED": {
+    "API": {
+      "TYPES": {
+        "SINGLE_CHOICE": "Single Choice",
+        "MULTIPLE_CHOICE": "Multiple Choice",
+        "TEXT": "Text"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.wrapper--main--edit {
+  @apply w-full;
+  &--navigation {
+    @apply flex justify-between items-center;
+    h3 {
+      @apply text-4xl text-white;
+    }
+    &--actions {
+      @apply flex gap-2;
+    }
+  }
+
+  &--form {
+    @apply mt-2 w-full flex;
+
+    &--question {
+      @apply w-1/3 pr-2;
+      tui-input {
+        @apply mb-6;
+      }
+    }
+    &--answer {
+      @apply w-2/3 pl-2;
+      &--item {
+        @apply w-1/2 float-left mb-6 flex gap-4 items-center;
+        &.odd {
+          @apply pr-3;
+        }
+        &.even {
+          @apply pl-3;
+        }
+        tui-input {
+          @apply w-4/5;
+        }
+      }
+    }
+  }
+}

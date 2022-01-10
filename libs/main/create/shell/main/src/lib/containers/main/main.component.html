@@ -1,0 +1,44 @@
+<ng-container *ngrxLet='state$; let state'>
+  <div class='wrapper--main--create'>
+    <div class='wrapper--main--create--navigation'>
+      <h3>{{'MAIN.CREATE.SHELL.MAIN.TITLE' | translate}}</h3>
+      <div class='wrapper--main--create--navigation--actions'>
+        <button tuiButton size='m' shape='rounded' [disabled]='!valid' (click)="submit()">
+          {{'MAIN.CREATE.SHELL.MAIN.BUTTONS.SUBMIT' | translate}}
+        </button>
+        <button tuiIconButton size='m' shape='rounded' appearance='outline' icon='tuiIconCompanyLarge'
+                (click)='goToManagementPage()'></button>
+      </div>
+    </div>
+    <div class="wrapper--main--create--form">
+      <div class="wrapper--main--create--form--question">
+        <tui-input [formControl]='text'>
+          {{'MAIN.CREATE.SHELL.MAIN.INPUTS.TEXT' | translate}}
+        </tui-input>
+        <tui-radio-list
+          orientation='horizontal'
+          [formControl]='type'
+          [items]='types'
+          [itemContent]='template'
+        ></tui-radio-list>
+        <ng-template #template let-data>
+          {{data | translate}}
+        </ng-template>
+      </div>
+      <div class="wrapper--main--create--form--answer" *ngIf="canAddAnswer">
+          <ng-container *ngFor="let answer of answers.controls; let i = index">
+            <div class="wrapper--main--create--form--answer--item" [class.odd]="i % 2 === 0" [class.even]="i % 2 > 0">
+              <tui-input [formControl]="getAnswerTextControl(answer)">
+                {{'MAIN.CREATE.SHELL.MAIN.INPUTS.TEXT' | translate}} {{'MAIN.CREATE.SHELL.MAIN.INPUTS.OF' | translate}} {{i + 1}}
+              </tui-input>
+              <button (click)='remove(i)' tuiIconButton size='m' shape='rounded' appearance='outline' icon='tuiIconTrash'></button>
+            </div>
+          </ng-container>
+          <button tuiButton size='l' (click)="addNewAnswer()">
+            {{'MAIN.CREATE.SHELL.MAIN.BUTTONS.ADD_ANSWER' | translate}}
+          </button>
+      </div>
+
+    </div>
+  </div>
+</ng-container>

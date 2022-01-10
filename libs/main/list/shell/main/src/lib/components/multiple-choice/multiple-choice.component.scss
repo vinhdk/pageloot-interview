@@ -1,0 +1,12 @@
+.wrapper--main--list--create--multiple--choice {
+  @apply w-full;
+  &--item {
+    @apply mb-2 flex items-center gap-4;
+    &--rectangle {
+      @apply w-6 h-6 border border-solid border-white rounded-sm flex items-center justify-center cursor-pointer;
+      &:hover {
+        @apply opacity-70;
+      }
+    }
+  }
+}

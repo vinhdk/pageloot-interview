@@ -1,0 +1,11 @@
+<div class="wrapper--main--list--create--text">
+  <tui-text-area [formControl]="input">
+    {{'MAIN.LIST.SHELL.MAIN.INPUTS.ANSWER' | translate}}
+  </tui-text-area>
+  <button *ngIf="!answered" tuiButton size="m" shape="rounded" (click)="submit()" [disabled]="input.invalid">
+    {{'MAIN.LIST.SHELL.MAIN.BUTTONS.SUBMIT' | translate}}
+  </button>
+  <button *ngIf="answered" tuiButton size="m" shape="rounded" appearance="accent" (click)="rollBack()">
+    {{'MAIN.LIST.SHELL.MAIN.BUTTONS.BACK' | translate}}
+  </button>
+</div>

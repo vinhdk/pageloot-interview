@@ -1,0 +1,16 @@
+<div class="wrapper--main--list--create--multiple--choice">
+  <ng-container *ngFor="let answer of answers">
+    <div class="wrapper--main--list--create--multiple--choice--item">
+      <div class="wrapper--main--list--create--multiple--choice--item--rectangle" (click)="change(answer)">
+        <tui-svg *ngIf="!!answer.checked" src="tuiIconCheck" class="icon"></tui-svg>
+      </div>
+      <b>{{answer.label}}</b>
+    </div>
+  </ng-container>
+  <button *ngIf="!answered" tuiButton size="m" shape="rounded" (click)="submit()" [disabled]="!valid">
+    {{'MAIN.LIST.SHELL.MAIN.BUTTONS.SUBMIT' | translate}}
+  </button>
+  <button *ngIf="answered" tuiButton size="m" shape="rounded" appearance="accent" (click)="rollBack()">
+    {{'MAIN.LIST.SHELL.MAIN.BUTTONS.BACK' | translate}}
+  </button>
+</div>

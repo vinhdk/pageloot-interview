@@ -1,0 +1,35 @@
+.wrapper--main--management {
+  @apply w-full;
+  &--table {
+    @apply w-full mt-2;
+    &--thead {
+      &--tr {
+        &--th {
+          @apply border border-solid border-gray-50 p-2 text-white;
+
+        }
+      }
+    }
+
+    &--tbody {
+      &--tr {
+        &--td {
+          @apply border border-solid border-gray-50 p-2 text-white text-center;
+          &--actions {
+            @apply flex gap-2 items-center;
+          }
+        }
+      }
+    }
+  }
+  &--navigation {
+    @apply flex justify-between items-center;
+    h3 {
+      @apply text-4xl text-white;
+    }
+
+    &--actions {
+      @apply flex gap-2;
+    }
+  }
+}

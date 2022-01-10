@@ -1,0 +1,16 @@
+<div class="wrapper--main--list--create--single--choice">
+  <tui-radio-list
+    [formControl]="input"
+    [items]="answers"
+    [itemContent]="template"
+  ></tui-radio-list>
+  <ng-template #template let-data>
+    <b>{{getText(data)}}</b>
+  </ng-template>
+  <button *ngIf="!answered" tuiButton size="m" shape="rounded" (click)="submit()" [disabled]="input.invalid">
+    {{'MAIN.LIST.SHELL.MAIN.BUTTONS.SUBMIT' | translate}}
+  </button>
+  <button *ngIf="answered" tuiButton size="m" shape="rounded" appearance="accent" (click)="rollBack()">
+    {{'MAIN.LIST.SHELL.MAIN.BUTTONS.BACK' | translate}}
+  </button>
+</div>
